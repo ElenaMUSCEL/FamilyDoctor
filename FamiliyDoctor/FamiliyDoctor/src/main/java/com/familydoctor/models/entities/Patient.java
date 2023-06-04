@@ -6,7 +6,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
-import java.util.Date;
 
 @Entity
 @Data
@@ -28,8 +27,21 @@ public class Patient {
     private String email;
     @Column(name = "phone_number")
     private String phoneNumber;
-    @Column(name = "year_of_birth")
-    private String yearOfBirth;
+    @Column(name = "date_of_birth")
+    private LocalDate dateOfBirth;
     @Column(name = "gender")
     private String gender;
+    @ManyToOne(fetch = FetchType.LAZY)
+    private Doctor doctor;
+
+    public void setDoctor(Doctor doctor) {
+        if (this.doctor != null) {
+            this.doctor.getPatients().remove(this);
+        }
+        this.doctor = doctor;
+        if (doctor != null) {
+            doctor.getPatients().add(this);
+        }
+    }
+
 }
