@@ -11,6 +11,5 @@ public interface PatientService {
     PatientDTO createPatient(PatientDTO  patientDTO);
     List<PatientDTO> getAllPatients();
     Patient updatePatientById(long patientId, PatientDTO patientDTO);
-
     void deletePatientById(long patientId) throws ChangeSetPersister.NotFoundException;
 }

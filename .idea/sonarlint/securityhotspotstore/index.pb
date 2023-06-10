@@ -13,5 +13,3 @@ w
 G.idea/sonarlint/issuestore/8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d,b\4\b4a0b63ce8560bbc5de0f9995c20cc861dc2adb3
 q
 AFamiliyDoctor/FamiliyDoctor/.mvn/wrapper/maven-wrapper.properties,e\f\ef5425263e91ed485edf2525215f11e7e9d2cccf
-ç
-]FamiliyDoctor/FamiliyDoctor/src/test/java/com/familydoctor/FamiliyDoctorApplicationTests.java,2\9\293b0c41f10ac894d8b22ccfe07b55fbfac28654

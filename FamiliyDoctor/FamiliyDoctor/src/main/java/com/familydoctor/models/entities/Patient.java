@@ -6,6 +6,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Data
@@ -33,6 +35,13 @@ public class Patient {
     private String gender;
     @ManyToOne(fetch = FetchType.LAZY)
     private Doctor doctor;
+    @ManyToMany
+    @JoinTable(
+            name = "patient_medical_record",
+            joinColumns = @JoinColumn(name = "patient_id"),
+            inverseJoinColumns = @JoinColumn(name = "medical_record_id")
+    )
+    private Set<MedicalRecord> medicalRecords = new HashSet<>();
 
     public void setDoctor(Doctor doctor) {
         if (this.doctor != null) {
@@ -43,5 +52,4 @@ public class Patient {
             doctor.getPatients().add(this);
         }
     }
-
 }

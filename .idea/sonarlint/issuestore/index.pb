@@ -13,5 +13,3 @@ P
  FamiliyDoctor/FamiliyDoctor/mvnw,2\c\2cc530afb8bb199d327dfffe93cd55aca240ea45
 T
 $FamiliyDoctor/FamiliyDoctor/mvnw.cmd,f\a\fa9b05080d07513c0508101a48023091daddfcd9
-ç
-]FamiliyDoctor/FamiliyDoctor/src/test/java/com/familydoctor/FamiliyDoctorApplicationTests.java,2\9\293b0c41f10ac894d8b22ccfe07b55fbfac28654

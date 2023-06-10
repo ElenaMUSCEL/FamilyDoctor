@@ -26,10 +26,12 @@ public class PatientController {
     public ResponseEntity<PatientDTO> createPatient(@RequestBody @Valid PatientDTO patientDTO) {
         return ResponseEntity.ok(patientService.createPatient(patientDTO));
     }
+
     @GetMapping
     public ResponseEntity<List<PatientDTO>> getAllPatients() {
         return ResponseEntity.ok(patientService.getAllPatients());
     }
+
     @PutMapping("/{patientId}")
     public ResponseEntity<Patient> updatePatientById(@PathVariable long patientId, @RequestBody PatientDTO patientDTO) {
         Patient updatedPatient = patientService.updatePatientById(patientId, patientDTO);
