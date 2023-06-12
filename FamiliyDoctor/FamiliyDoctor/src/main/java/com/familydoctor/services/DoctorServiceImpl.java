@@ -14,9 +14,7 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
 import java.time.Period;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 import java.util.stream.Collectors;
 
 @Service
@@ -81,33 +79,30 @@ public class DoctorServiceImpl implements DoctorService {
         patient.setEmail(patientDTO.getEmail());
         patient.setAddress(patientDTO.getAddress());
 
-        Random random = new Random();
-        long id = random.nextLong();
-        patient.setId(id);
+        patient = patientRepository.save(patient);
 
         doctor.getPatients().add(patient);
         doctorRepository.save(doctor);
+
         return mapPatientToDTO(patient);
     }
+
     @Override
-    public List<PatientDTO> getPatientsByAge(Long doctorId, int age) {
+    public List<PatientDTO> getPatientsByBirthYear(Long doctorId, int birthYear) {
         Doctor doctor = doctorRepository.findById(doctorId)
                 .orElseThrow(() -> new DoctorNotFoundException("Doctor not found: Doctor with id " + doctorId, doctorId));
-        List<Patient> patients = new ArrayList<>();
-        for (Patient patient : patients) {
-            int patientAge = calculateAge(patient.getDateOfBirth());
-            if (patientAge < 18) {
-                System.out.println("Patient is under age");
-            } else {
-                System.out.println("Patient is an adult");
-            }
-        }
-        patients = doctor.getPatients().stream()
 
-                .filter(patient -> calculateAge(patient.getDateOfBirth()) == age)
+        List<Patient> patients = doctor.getPatients();
+
+        List<Patient> filteredPatients = patients.stream()
+                .filter(patient -> getBirthYear(patient.getDateOfBirth()) == birthYear)
                 .collect(Collectors.toList());
-        return mapPatientsToDTOs(patients);
 
+        return mapPatientsToDTOs(filteredPatients);
+    }
+
+    private int getBirthYear(LocalDate dateOfBirth) {
+        return dateOfBirth.getYear();
     }
 
     private List<DoctorDTO> mapDoctorsToDTOs(List<Doctor> doctors) {

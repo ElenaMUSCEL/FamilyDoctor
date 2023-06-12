@@ -28,4 +28,8 @@ public class PatientDTO implements Serializable {
     private LocalDate dateOfBirth;
     @NotBlank(message = "Gender name is required")
     private String gender;
+    private long id;
+    public long getId() {
+        return id;
+    }
 }

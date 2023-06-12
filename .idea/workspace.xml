@@ -7,7 +7,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cc58c767-3dc7-4879-9a64-51bfe229af36" name="Changes" comment="I have made 2 other entities Doctor and MedicalRecord &#10;I have made the controller and service and repository for the tow of them" />
+    <list default="true" id="cc58c767-3dc7-4879-9a64-51bfe229af36" name="Changes" comment="I have made 2 other entities Doctor and MedicalRecord &#10;I have made the controller and service and repository for the tow of them">
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -75,9 +80,9 @@
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;last_directory_selection&quot;: &quot;C:/Users/musce/FamiliyDoctorProject(2)/FamilyDoctor/FamiliyDoctor/FamiliyDoctor/src/test/java/com/familydoctor&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/musce/FamiliyDoctorProject(2)/FamilyDoctor&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;copyright&quot;
   }
@@ -90,7 +95,7 @@
       <recent name="com.familydoctor.services" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.PatientServiceIntegrationTest">
+  <component name="RunManager">
     <configuration name="PatientServiceIntegrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="FamiliyDoctor" />
       <extension name="coverage">

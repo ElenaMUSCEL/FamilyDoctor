@@ -38,8 +38,15 @@ public class PatientServiceTest {
     @Test
     void createPatient_ValidPatientDTO_ReturnsConvertedPatientDTO() {
         // Arrange
-        PatientDTO patientDTO = new PatientDTO("Ion", "Popescu", "Timisoara", "ion@gmail.com",
-                "0787676676", LocalDate.of(1990, 1, 1), "male");
+        PatientDTO patientDTO = new PatientDTO();
+        patientDTO.setFirstName("Ion");
+        patientDTO.setLastName("Popescu");
+        patientDTO.setAddress("Timisoara");
+        patientDTO.setEmail("ion@gmail.com");
+        patientDTO.setPhoneNumber("0787676676");
+        patientDTO.setDateOfBirth(LocalDate.of(1990, 1, 1));
+        patientDTO.setGender("male");
+
         Patient patientToSave = new Patient();
         Patient patientSaved = new Patient();
         when(objectMapper.convertValue(eq(patientDTO), eq(Patient.class))).thenReturn(patientToSave);
@@ -54,7 +61,6 @@ public class PatientServiceTest {
         verify(patientRepository).save(eq(patientToSave));
         verify(objectMapper).convertValue(eq(patientSaved), eq(PatientDTO.class));
     }
-
     @Test
     void getAllPatients_ExistingPatients_ReturnsListOfPatientsDTO() {
         Patient patient1 = new Patient();
@@ -77,8 +83,15 @@ public class PatientServiceTest {
     @Test
     void updatePatientById_ExistingPatient_ReturnsUpdatedPatient() {
         long patientId = 1;
-        PatientDTO patientDTO = new PatientDTO("Ion", "Popescu", "Timisoara", "ion@gmail.com",
-                "0787676676", LocalDate.of(1990, 1, 1), "male");
+        PatientDTO patientDTO = new PatientDTO();
+        patientDTO.setFirstName("Ion");
+        patientDTO.setLastName("Popescu");
+        patientDTO.setAddress("Timisoara");
+        patientDTO.setEmail("ion@gmail.com");
+        patientDTO.setPhoneNumber("0787676676");
+        patientDTO.setDateOfBirth(LocalDate.of(1990, 1, 1));
+        patientDTO.setGender("male");
+
         Patient patientFound = new Patient();
         Patient updatedPatient = new Patient();
         when(patientRepository.findById(eq(patientId))).thenReturn(Optional.of(patientFound));

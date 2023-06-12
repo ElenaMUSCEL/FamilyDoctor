@@ -63,7 +63,6 @@ class PatientServiceIntegrationTest {
     @Test
     void testCreatePatientShouldFailValidation() throws Exception {
         PatientDTO patientDTO = new PatientDTO();
-        // Missing required fields
 
         mockMvc.perform(post("/api/patients")
                         .contentType(MediaType.APPLICATION_JSON)
@@ -139,7 +138,6 @@ class PatientServiceIntegrationTest {
                 .andExpect(status().isOk());
 
         Optional<Patient> deletedPatient = patientRepository.findById(patient.getId());
-       // assertThat(deletedPatient).isEmpty();
     }
 
     @Test

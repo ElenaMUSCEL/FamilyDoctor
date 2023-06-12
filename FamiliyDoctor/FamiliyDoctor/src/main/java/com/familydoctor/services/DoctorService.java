@@ -16,7 +16,7 @@ public interface DoctorService {
 
     PatientDTO addPatient(Long doctorId, PatientDTO patientDTO);
 
-    List<PatientDTO> getPatientsByAge(Long id, int age);
-
     DoctorDTO createDoctor(DoctorDTO doctorDTO);
+
+    List<PatientDTO> getPatientsByBirthYear(Long doctorId, int birthYear);
 }

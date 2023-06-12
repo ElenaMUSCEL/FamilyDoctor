@@ -10,7 +10,9 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@RequestMapping("/api/medical-records")
 public class MedicalRecordController {
+
     private final MedicalRecordService medicalRecordService;
 
     @Autowired
@@ -25,7 +27,8 @@ public class MedicalRecordController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<MedicalRecordDTO> updateMedicalRecord(@PathVariable Long id, @RequestBody MedicalRecordDTO medicalRecordDTO) {
+    public ResponseEntity<MedicalRecordDTO> updateMedicalRecord(
+            @PathVariable Long id, @RequestBody MedicalRecordDTO medicalRecordDTO) {
         MedicalRecordDTO updatedMedicalRecord = medicalRecordService.updateMedicalRecord(id, medicalRecordDTO);
         return ResponseEntity.ok(updatedMedicalRecord);
     }
@@ -39,6 +42,13 @@ public class MedicalRecordController {
     @GetMapping("/patient/{patientId}")
     public ResponseEntity<List<MedicalRecordDTO>> getMedicalRecordsByPatientId(@PathVariable Long patientId) {
         List<MedicalRecordDTO> medicalRecords = medicalRecordService.getMedicalRecordsByPatientId(patientId);
+        return ResponseEntity.ok(medicalRecords);
+    }
+
+    @GetMapping("/doctor/{doctorId}/patient/{patientId}")
+    public ResponseEntity<List<MedicalRecordDTO>> getMedicalRecordsByDoctorAndPatient(
+            @PathVariable Long doctorId, @PathVariable Long patientId) {
+        List<MedicalRecordDTO> medicalRecords = medicalRecordService.getMedicalRecordsByDoctorAndPatient(doctorId, patientId);
         return ResponseEntity.ok(medicalRecords);
     }
 }

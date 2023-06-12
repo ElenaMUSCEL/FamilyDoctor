@@ -1,5 +1,6 @@
 package com.familydoctor.repositories;
 
+import com.familydoctor.models.entities.Doctor;
 import com.familydoctor.models.entities.MedicalRecord;
 import com.familydoctor.models.entities.Patient;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -9,5 +10,8 @@ import java.util.List;
 
 @Repository
 public interface MedicalRecordRepository extends JpaRepository<MedicalRecord, Long> {
+
+    List<MedicalRecord> findByDoctorAndPatient(Doctor doctor, Patient patient);
+
     List<MedicalRecord> findByPatient(Patient patient);
 }

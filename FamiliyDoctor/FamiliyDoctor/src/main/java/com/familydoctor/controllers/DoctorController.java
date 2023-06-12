@@ -61,7 +61,7 @@ public class DoctorController {
 
     @GetMapping("/{id}/patients")
     public ResponseEntity<List<PatientDTO>> getPatientsByAge(@PathVariable Long id, @RequestParam int age) {
-        List<PatientDTO> patients = doctorService.getPatientsByAge(id, age);
+        List<PatientDTO> patients = doctorService.getPatientsByBirthYear(id, age);
         return ResponseEntity.ok(patients);
     }
 }
