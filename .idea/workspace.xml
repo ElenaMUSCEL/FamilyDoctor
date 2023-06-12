@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SHOW_STRUCTURE" value="true" />
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="cc58c767-3dc7-4879-9a64-51bfe229af36" name="Changes" comment="I have made 2 other entities Doctor and MedicalRecord &#10;I have made the controller and service and repository for the tow of them" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="create_api_for_patient" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="bc7b5bf4-aa9f-4860-bd7e-947eac6166be" />
+        <option name="url" value="https://github.com/ElenaMUSCEL/FamilyDoctor.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectId" id="2QNRfR8WhoqNwMngDhPaZ6SVMxh" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/Users/musce/FamiliyDoctorProject(2)/FamilyDoctor/FamiliyDoctor/FamiliyDoctor/src/test/java/com/familydoctor&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/musce/FamiliyDoctorProject(2)/FamilyDoctor&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;copyright&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.familydoctor.exceptions" />
+    </key>
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="com.familydoctor.services" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.PatientServiceIntegrationTest">
+    <configuration name="PatientServiceIntegrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="FamiliyDoctor" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.familydoctor.integrationTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.familydoctor.integrationTest" />
+      <option name="MAIN_CLASS_NAME" value="com.familydoctor.integrationTest.PatientServiceIntegrationTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PatientServiceIntegrationTest.testDeletePatientByIdShouldFailPatientNotFound" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="FamiliyDoctor" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.familydoctor.integrationTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.familydoctor.integrationTest" />
+      <option name="MAIN_CLASS_NAME" value="com.familydoctor.integrationTest.PatientServiceIntegrationTest" />
+      <option name="METHOD_NAME" value="testDeletePatientByIdShouldFailPatientNotFound" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PatientServiceIntegrationTest.testGetAllPatientsShouldPass" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="FamiliyDoctor" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.familydoctor.integrationTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.familydoctor.integrationTest" />
+      <option name="MAIN_CLASS_NAME" value="com.familydoctor.integrationTest.PatientServiceIntegrationTest" />
+      <option name="METHOD_NAME" value="testGetAllPatientsShouldPass" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PatientServiceIntegrationTest.testUpdatePatientByIdShouldFailPatientNotFound" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="FamiliyDoctor" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.familydoctor.integrationTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.familydoctor.integrationTest" />
+      <option name="MAIN_CLASS_NAME" value="com.familydoctor.integrationTest.PatientServiceIntegrationTest" />
+      <option name="METHOD_NAME" value="testUpdatePatientByIdShouldFailPatientNotFound" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PatientServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="FamiliyDoctor" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.familydoctor.unitTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.familydoctor.unitTest" />
+      <option name="MAIN_CLASS_NAME" value="com.familydoctor.unitTest.PatientServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.PatientServiceTest" />
+        <item itemvalue="JUnit.PatientServiceIntegrationTest" />
+        <item itemvalue="JUnit.PatientServiceIntegrationTest.testDeletePatientByIdShouldFailPatientNotFound" />
+        <item itemvalue="JUnit.PatientServiceIntegrationTest.testUpdatePatientByIdShouldFailPatientNotFound" />
+        <item itemvalue="JUnit.PatientServiceIntegrationTest.testGetAllPatientsShouldPass" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cc58c767-3dc7-4879-9a64-51bfe229af36" name="Changes" comment="" />
+      <created>1685192155633</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1685192155633</updated>
+    </task>
+    <task id="LOCAL-00001" summary="I have made the Api for create patient and validations for patient">
+      <created>1685555505335</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1685555505335</updated>
+    </task>
+    <task id="LOCAL-00002" summary="I have made the integration and unit test for patient &#10;I have made another entity called Doctor with Crud API and an API to filter patients age">
+      <created>1685901236424</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1685901236424</updated>
+    </task>
+    <task id="LOCAL-00003" summary="I have made 2 other entities Doctor and MedicalRecord &#10;I have made the controller and service and repository for the tow of them">
+      <created>1686426732644</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1686426732644</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="I have made the Api for create patient and validations for patient" />
+    <MESSAGE value="I have made the integration and unit test for patient &#10;I have made another entity called Doctor with Crud API and an API to filter patients age" />
+    <MESSAGE value="I have made 2 other entities Doctor and MedicalRecord &#10;I have made the controller and service and repository for the tow of them" />
+    <option name="LAST_COMMIT_MESSAGE" value="I have made 2 other entities Doctor and MedicalRecord &#10;I have made the controller and service and repository for the tow of them" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/FamiliyDoctor/FamiliyDoctor/src/test/java/com/familydoctor/unitTest/PatientServiceTest.java</url>
+          <line>142</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="com.familydoctor.repositories.PatientRepository$MockitoMock$podWK7Zy" memberName="mockitoInterceptor" />
+      </pinned-members>
+    </pin-to-top-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="Patient " language="JAVA" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand>
+      <path>
+        <item name="FamilyDoctor" type="b2602c69:ProjectViewProjectNode" />
+        <item name="dir{file://C:/Users/musce/FamiliyDoctorProject(2)/FamilyDoctor}" type="462c0819:PsiDirectoryNode" />
+      </path>
+      <path>
+        <item name="FamilyDoctor" type="b2602c69:ProjectViewProjectNode" />
+        <item name="dir{file://C:/Users/musce/FamiliyDoctorProject(2)/FamilyDoctor}" type="462c0819:PsiDirectoryNode" />
+        <item name="dir{file://C:/Users/musce/FamiliyDoctorProject(2)/FamilyDoctor/FamiliyDoctor}" type="462c0819:PsiDirectoryNode" />
+      </path>
+      <path>
+        <item name="FamilyDoctor" type="b2602c69:ProjectViewProjectNode" />
+        <item name="dir{file://C:/Users/musce/FamiliyDoctorProject(2)/FamilyDoctor}" type="462c0819:PsiDirectoryNode" />
+        <item name="dir{file://C:/Users/musce/FamiliyDoctorProject(2)/FamilyDoctor/FamiliyDoctor}" type="462c0819:PsiDirectoryNode" />
+        <item name="dir{file://C:/Users/musce/FamiliyDoctorProject(2)/FamilyDoctor/FamiliyDoctor/FamiliyDoctor}" type="462c0819:PsiDirectoryNode" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/FamilyDoctor$FamiliyDoctorApplication.ic" NAME="FamiliyDoctorApplication Coverage Results" MODIFIED="1685216360704" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.familydoctor.*</FILTER>
+    </SUITE>
+  </component>
+</project>
