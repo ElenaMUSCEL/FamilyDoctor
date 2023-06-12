@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="LanguageInjectionConfiguration">
+    <injection language="GitIgnore" injector-id="java">
+      <display-name>MDC.get (org.slf4j)</display-name>
+      <single-file value="false" />
+      <place><![CDATA[psiParameter().ofMethod(0, psiMethod().withName("get").withParameters("java.lang.String").definedInClass("org.slf4j.MDC"))]]></place>
+    </injection>
+  </component>
+</project>
