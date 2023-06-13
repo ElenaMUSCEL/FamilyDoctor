@@ -1,0 +1,12 @@
+
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÒÊ‰ˆøÿÿÿÿ
+h	java:S100'"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ê´¡ÿÿÿÿÿ
+h	java:S100;"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(—Ï‰ıÿÿÿÿ
+c	java:S100N"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ñóëí
+]
+java:S1854S"BRemove this useless assignment to local variable "updatedPatient".(ˆÈê¯ûÿÿÿÿ
+N
+java:S1481S"3Remove this unused "updatedPatient" local variable.(ˆÈê¯ûÿÿÿÿ
+h	java:S100f"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ØÓœøúÿÿÿÿ
+h	java:S100r"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ì²àèùÿÿÿÿ
+h	java:S100~"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¨ÊÀØÿÿÿÿÿ
