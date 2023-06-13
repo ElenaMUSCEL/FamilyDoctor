@@ -44,11 +44,4 @@ public class MedicalRecordController {
         List<MedicalRecordDTO> medicalRecords = medicalRecordService.getMedicalRecordsByPatientId(patientId);
         return ResponseEntity.ok(medicalRecords);
     }
-
-    @GetMapping("/doctor/{doctorId}/patient/{patientId}")
-    public ResponseEntity<List<MedicalRecordDTO>> getMedicalRecordsByDoctorAndPatient(
-            @PathVariable Long doctorId, @PathVariable Long patientId) {
-        List<MedicalRecordDTO> medicalRecords = medicalRecordService.getMedicalRecordsByDoctorAndPatient(doctorId, patientId);
-        return ResponseEntity.ok(medicalRecords);
-    }
 }

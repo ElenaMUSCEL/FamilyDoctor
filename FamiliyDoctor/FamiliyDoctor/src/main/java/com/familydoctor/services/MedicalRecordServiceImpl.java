@@ -122,17 +122,18 @@ public class MedicalRecordServiceImpl implements MedicalRecordService {
                 .collect(Collectors.toList());
     }
 
-    private void updateMedicalRecordFields(MedicalRecord medicalRecord, MedicalRecordDTO medicalRecordDTO) {
-        medicalRecord.setSymptoms(medicalRecordDTO.getSymptoms());
-        medicalRecord.setDiagnostic(medicalRecordDTO.getDiagnostic());
-        medicalRecord.setTreatment(medicalRecordDTO.getTreatment());
+    public void updateMedicalRecordFields(MedicalRecord medicalRecordToUpdate, MedicalRecordDTO medicalRecordDTO) {
+        medicalRecordToUpdate.setSymptoms(medicalRecordDTO.getSymptoms());
+        medicalRecordToUpdate.setDiagnostic(medicalRecordDTO.getDiagnostic());
+        medicalRecordToUpdate.setTreatment(medicalRecordDTO.getTreatment());
 
         Patient patient = patientRepository.findById(medicalRecordDTO.getPatient().getId())
                 .orElseThrow(() -> new PatientNotFoundException("Patient not found: ID " + medicalRecordDTO.getPatient().getId(), medicalRecordDTO.getPatient().getId()));
-        medicalRecord.setPatient(patient);
+        medicalRecordToUpdate.setPatient(patient);
 
         Doctor doctor = (Doctor) doctorRepository.findByFirstNameAndLastName(medicalRecordDTO.getDoctorFirstName(), medicalRecordDTO.getDoctorLastName())
                 .orElseThrow(() -> new DoctorNotFoundException("Doctor not found: " + medicalRecordDTO.getDoctorFirstName() + " " + medicalRecordDTO.getDoctorLastName()));
-        medicalRecord.setDoctor(doctor);
+        medicalRecordToUpdate.setDoctor(doctor);
     }
 }
+
