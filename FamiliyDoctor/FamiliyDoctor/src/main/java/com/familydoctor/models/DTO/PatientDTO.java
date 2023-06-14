@@ -24,7 +24,7 @@ public class PatientDTO implements Serializable {
     private String email;
     @NotBlank(message = "Phone number is required")
     private String phoneNumber;
-    @Past(message = "Date of birth must be in the past")
+    @NotBlank
     private LocalDate dateOfBirth;
     @NotBlank(message = "Gender name is required")
     private String gender;

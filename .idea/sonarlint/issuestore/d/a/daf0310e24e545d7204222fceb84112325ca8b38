@@ -1,0 +1,9 @@
+
+x
+java:S1192-"bDefine a constant instead of duplicating this literal "Doctor not found: Doctor with id " 5 times.(äÛÂ
+3
+java:S2119T"Save and re-use this "Random".(¼İÅf
+N	java:S106d"9Replace this use of System.out or System.err by a logger.(Í±øÑ
+N	java:S106f"9Replace this use of System.out or System.err by a logger.(€ÃÜ‚
+P
+java:S1068"5Remove this unused "patientRepository" private field.(ˆŠ¾†ÿÿÿÿÿ

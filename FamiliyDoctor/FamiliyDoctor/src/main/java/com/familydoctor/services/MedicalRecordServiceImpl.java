@@ -60,14 +60,18 @@ public class MedicalRecordServiceImpl implements MedicalRecordService {
                 .orElseThrow(() -> new MedicalRecordNotFoundException("Medical record not found: ID " + id, id));
         return convertToDTO(medicalRecord);
     }
-
     @Override
     public List<MedicalRecordDTO> getMedicalRecordsByPatientId(Long patientId) {
         Patient patient = patientRepository.findById(patientId)
                 .orElseThrow(() -> new PatientNotFoundException("Patient not found: ID " + patientId, patientId));
 
-        List<MedicalRecord> medicalRecords = medicalRecordRepository.findByPatient(patient);
-        return convertToDTOList(medicalRecords);
+        List<MedicalRecord> medicalRecords = medicalRecordRepository.findAll();
+
+        List<MedicalRecord> filteredRecords = medicalRecords.stream()
+                .filter(record -> record.getPatient().equals(patient))
+                .collect(Collectors.toList());
+
+        return convertToDTOList(filteredRecords);
     }
 
     @Override
@@ -78,8 +82,13 @@ public class MedicalRecordServiceImpl implements MedicalRecordService {
         Patient patient = patientRepository.findById(patientId)
                 .orElseThrow(() -> new PatientNotFoundException("Patient not found: ID " + patientId, patientId));
 
-        List<MedicalRecord> medicalRecords = medicalRecordRepository.findByDoctorAndPatient(doctor, patient);
-        return convertToDTOList(medicalRecords);
+        List<MedicalRecord> medicalRecords = medicalRecordRepository.findAll();
+
+        List<MedicalRecord> filteredRecords = medicalRecords.stream()
+                .filter(record -> record.getDoctor().equals(doctor) && record.getPatient().equals(patient))
+                .collect(Collectors.toList());
+
+        return convertToDTOList(filteredRecords);
     }
 
     private MedicalRecord convertToEntity(MedicalRecordDTO medicalRecordDTO) {
@@ -122,17 +131,18 @@ public class MedicalRecordServiceImpl implements MedicalRecordService {
                 .collect(Collectors.toList());
     }
 
-    private void updateMedicalRecordFields(MedicalRecord medicalRecord, MedicalRecordDTO medicalRecordDTO) {
-        medicalRecord.setSymptoms(medicalRecordDTO.getSymptoms());
-        medicalRecord.setDiagnostic(medicalRecordDTO.getDiagnostic());
-        medicalRecord.setTreatment(medicalRecordDTO.getTreatment());
+    public void updateMedicalRecordFields(MedicalRecord medicalRecordToUpdate, MedicalRecordDTO medicalRecordDTO) {
+        medicalRecordToUpdate.setSymptoms(medicalRecordDTO.getSymptoms());
+        medicalRecordToUpdate.setDiagnostic(medicalRecordDTO.getDiagnostic());
+        medicalRecordToUpdate.setTreatment(medicalRecordDTO.getTreatment());
 
         Patient patient = patientRepository.findById(medicalRecordDTO.getPatient().getId())
                 .orElseThrow(() -> new PatientNotFoundException("Patient not found: ID " + medicalRecordDTO.getPatient().getId(), medicalRecordDTO.getPatient().getId()));
-        medicalRecord.setPatient(patient);
+        medicalRecordToUpdate.setPatient(patient);
 
         Doctor doctor = (Doctor) doctorRepository.findByFirstNameAndLastName(medicalRecordDTO.getDoctorFirstName(), medicalRecordDTO.getDoctorLastName())
                 .orElseThrow(() -> new DoctorNotFoundException("Doctor not found: " + medicalRecordDTO.getDoctorFirstName() + " " + medicalRecordDTO.getDoctorLastName()));
-        medicalRecord.setDoctor(doctor);
+        medicalRecordToUpdate.setDoctor(doctor);
     }
 }
+

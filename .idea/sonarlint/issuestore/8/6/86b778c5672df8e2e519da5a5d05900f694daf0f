@@ -1,0 +1,14 @@
+
+^
+java:S11921"HDefine a constant instead of duplicating this literal "Popescu" 4 times.(ÍşÊ‡
+h
+java:S1192l"SDefine a constant instead of duplicating this literal "/api/patients/{id}" 4 times.(® 
+i
+java:S11928"NDefine a constant instead of duplicating this literal "/api/patients" 3 times.(ä“Ûñúÿÿÿÿ
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ñè‰ğ
+P	java:S125*"<This block of commented-out lines of code should be removed.(„£ä1
+Y
+java:S1854"BRemove this useless assignment to local variable "deletedPatient".(ŸÒ±Î
+J
+java:S1481"3Remove this unused "deletedPatient" local variable.(ŸÒ±Î
+R	java:S125"<This block of commented-out lines of code should be removed.(ÊüŸ

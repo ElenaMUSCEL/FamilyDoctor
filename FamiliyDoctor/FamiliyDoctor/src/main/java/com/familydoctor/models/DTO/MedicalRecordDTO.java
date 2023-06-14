@@ -1,6 +1,5 @@
 package com.familydoctor.models.DTO;
 
-import com.familydoctor.models.entities.Patient;
 import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Data;
