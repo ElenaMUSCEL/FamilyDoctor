@@ -14,9 +14,6 @@ import java.util.List;
 @Repository
 public interface MedicalRecordRepository extends JpaRepository<MedicalRecord, Long> {
 
-    List<MedicalRecord> findByDoctorAndPatient(Doctor doctor, Patient patient);
-
-    List<MedicalRecord> findByPatient(Patient patient);
     @Modifying
     @Query("UPDATE MedicalRecord m SET m.doctor.firstName = :firstName WHERE m.id = :recordId")
     void updateDoctorFirstName(@Param("firstName") String firstName, @Param("recordId") Long recordId);

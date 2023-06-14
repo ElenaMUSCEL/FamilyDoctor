@@ -60,14 +60,18 @@ public class MedicalRecordServiceImpl implements MedicalRecordService {
                 .orElseThrow(() -> new MedicalRecordNotFoundException("Medical record not found: ID " + id, id));
         return convertToDTO(medicalRecord);
     }
-
     @Override
     public List<MedicalRecordDTO> getMedicalRecordsByPatientId(Long patientId) {
         Patient patient = patientRepository.findById(patientId)
                 .orElseThrow(() -> new PatientNotFoundException("Patient not found: ID " + patientId, patientId));
 
-        List<MedicalRecord> medicalRecords = medicalRecordRepository.findByPatient(patient);
-        return convertToDTOList(medicalRecords);
+        List<MedicalRecord> medicalRecords = medicalRecordRepository.findAll();
+
+        List<MedicalRecord> filteredRecords = medicalRecords.stream()
+                .filter(record -> record.getPatient().equals(patient))
+                .collect(Collectors.toList());
+
+        return convertToDTOList(filteredRecords);
     }
 
     @Override
@@ -78,8 +82,13 @@ public class MedicalRecordServiceImpl implements MedicalRecordService {
         Patient patient = patientRepository.findById(patientId)
                 .orElseThrow(() -> new PatientNotFoundException("Patient not found: ID " + patientId, patientId));
 
-        List<MedicalRecord> medicalRecords = medicalRecordRepository.findByDoctorAndPatient(doctor, patient);
-        return convertToDTOList(medicalRecords);
+        List<MedicalRecord> medicalRecords = medicalRecordRepository.findAll();
+
+        List<MedicalRecord> filteredRecords = medicalRecords.stream()
+                .filter(record -> record.getDoctor().equals(doctor) && record.getPatient().equals(patient))
+                .collect(Collectors.toList());
+
+        return convertToDTOList(filteredRecords);
     }
 
     private MedicalRecord convertToEntity(MedicalRecordDTO medicalRecordDTO) {
