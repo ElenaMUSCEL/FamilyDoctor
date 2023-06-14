@@ -18,12 +18,21 @@ Implementation of a data validation system at the API level
 
 Technology Stack:
 
-Spring Boot 3.0.6
-Java 17
-Maven
-Lombok
-PostgreSQL
-swagger
+- Spring Boot 3.0.6
+
+- Java 17
+
+- Maven
+
+- Lombok
+
+- PostgreSQL
+
+- H2 in-memory database
+
+- Hibernate as ORM
+
+- JUnit and MockMvc
 
 
 Authors
